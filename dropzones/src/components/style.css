@@ -1,0 +1,131 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color:#aea9a9;
+    
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .image-upload-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #cec7c9;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(110, 15, 107, 0.9);
+  }
+  
+  .drop-zone {
+    width: 100%;
+    height: 220px;
+    border: 3px dashed #aea9a9;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .drop-zone p {
+    font-size: 1.2rem;
+    color: #666;
+    text-align: center;
+  }
+  
+  .drop-zone img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 10px;
+  }
+  
+  .drop-zone-active {
+    background-color: #e3f7ff;
+    border-color: #4ea1d3;
+  }
+  
+  .upload-button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .upload-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .upload-button:disabled {
+    background-color: #aaa;
+    cursor: not-allowed;
+  }
+  
+  .upload-status {
+    margin-top: 15px;
+    font-size: 1.1rem;
+    color: #28a745;
+  }
+  
+  .sample-images-container {
+    margin-top: 30px;
+    text-align: center;
+    background-color: #cec7c9;
+  }
+  
+  .sample-images-container h3 {
+    font-size: 1.5rem;
+    color: #333;
+    background-color: #cec7c9;
+  }
+  
+  .sample-images-grid {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+    background-color: #cec7c9;
+  }
+  
+  .sample-images-grid img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: transform 0.2s ease, border-color 0.3s ease;
+  }
+  
+  .sample-images-grid img:hover {
+    transform: scale(1.05);
+    border-color: #007bff;
+  }
+  
+  @media (max-width: 600px) {
+    .drop-zone {
+      height: 150px;
+    }
+  
+    .sample-images-grid {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .sample-images-grid img {
+      width: 100%;
+      height: auto;
+    }
+  }  
